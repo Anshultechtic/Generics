@@ -1,11 +1,11 @@
 package generics;
 
+import generics.Main.BaseballPlayer;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import generics.Main.BaseballPlayer;
-
-public class BaseBallTeam {
+public class SportsTeam {
 
 	private String teamName;
 	private List<BaseballPlayer> teamMembers = new ArrayList<>();
@@ -13,7 +13,7 @@ public class BaseBallTeam {
 	private int totalLosses;
 	private int totalDraws;
 
-	public BaseBallTeam(String teamname) {
+	public SportsTeam(String teamname) {
 		super();
 		teamName = teamname;
 	}
