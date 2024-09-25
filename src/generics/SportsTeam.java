@@ -1,6 +1,6 @@
 package generics;
 
-import generics.Main.BaseballPlayer;
+import generics.Main.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 public class SportsTeam {
 
 	private String teamName;
-	private List<BaseballPlayer> teamMembers = new ArrayList<>();
+	private List<Player> teamMembers = new ArrayList<>();
 	private int totalWins;
 	private int totalLosses;
 	private int totalDraws;
@@ -18,7 +18,7 @@ public class SportsTeam {
 		teamName = teamname;
 	}
 
-	public void addTeamMember(BaseballPlayer player) {
+	public void addTeamMember(Player player) {
 
 		if (!teamMembers.contains(player)) {
 
@@ -62,13 +62,6 @@ public class SportsTeam {
 
 		return teamName + ("(Ranked " + rankings() + ")");
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 
 }

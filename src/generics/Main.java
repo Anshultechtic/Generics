@@ -2,7 +2,9 @@ package generics;
 
 public class Main {
 
-	record BaseballPlayer(String name, String position) {
+	interface Player{}
+
+	record BaseballPlayer(String name, String position) implements Player {
 
 		public String getName() {
 
@@ -15,6 +17,12 @@ public class Main {
 
 		BaseBallTeam ourTeam = new BaseBallTeam("Our Team");
 		BaseBallTeam theirTeam = new BaseBallTeam("Their Team");
+
+		SportsTeam ourTeam1 = new SportsTeam("Our Team");
+		SportsTeam theirTeam1 = new SportsTeam("Their Team");
+
+
+
 
 		var player1 = new BaseballPlayer("Harbhajhan Singh","Bowler");
 		var player2 = new BaseballPlayer("Tonny Singh","Keeper");
