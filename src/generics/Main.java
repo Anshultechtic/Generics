@@ -16,6 +16,11 @@ public class Main {
 		BaseBallTeam ourTeam = new BaseBallTeam("Our Team");
 		BaseBallTeam theirTeam = new BaseBallTeam("Their Team");
 		setScoreResult(ourTeam,theirTeam, 253, 75);
+		var player1 = new BaseballPlayer("Harbhajhan Singh","Bowler");
+		var player2 = new BaseballPlayer("Tonny Singh","Keeper");
+
+
+
 
 	}
 
