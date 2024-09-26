@@ -1,24 +1,24 @@
 package generics;
 
-import generics.Main.Player;
+import generics.Main.BaseballPlayer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SportsTeam<T extends Player> {
+public class FootBallTeam {
 
 	private String teamName;
-	private List<Player> teamMembers = new ArrayList<>();
+	private List<BaseballPlayer> teamMembers = new ArrayList<>();
 	private int totalWins;
 	private int totalLosses;
 	private int totalDraws;
 
-	public SportsTeam(String teamname) {
+	public FootBallTeam(String teamname) {
 		super();
 		teamName = teamname;
 	}
 
-	public void addTeamMember(Player player) {
+	public void addTeamMember(BaseballPlayer player) {
 
 		if (!teamMembers.contains(player)) {
 
@@ -62,6 +62,13 @@ public class SportsTeam<T extends Player> {
 
 		return teamName + ("(Ranked " + rankings() + ")");
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 
 }

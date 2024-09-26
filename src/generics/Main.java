@@ -13,22 +13,38 @@ public class Main {
 
 	}
 
+	record footBallPlayer(String name, String position) implements Player {
+
+		public String getName() {
+
+			return name;
+		}
+
+	}
+
+
+
+
+
+
 	public static void main(String[] args) {
 
-		BaseBallTeam ourTeam = new BaseBallTeam("Our Team");
-		BaseBallTeam theirTeam = new BaseBallTeam("Their Team");
-
-		SportsTeam ourTeam1 = new SportsTeam("Our Team");
-		SportsTeam theirTeam1 = new SportsTeam("Their Team");
 
 
+		SportsTeam<footBallPlayer> football = new SportsTeam<>("footballTeam ");
+
+		BaseballPlayer player3 = new BaseballPlayer("Harbhajhan Singh","Bowler");
+		football.addTeamMember(player3);
+		football.listTeamMembers();
 
 
-		var player1 = new BaseballPlayer("Harbhajhan Singh","Bowler");
-		var player2 = new BaseballPlayer("Tonny Singh","Keeper");
-		ourTeam.addTeamMember(player1);
-		ourTeam.addTeamMember(player2);
-		ourTeam.listTeamMembers();
+
+
+//		BaseballPlayer player3 = new BaseballPlayer("Harbhajhan Singh","Bowler");
+//		BaseballPlayer player2 = new BaseballPlayer("Tonny Singh","Keeper");
+//		baseBallTeam.addTeamMember(player1);
+//		baseBallTeam.addTeamMember(player2);
+//		baseBallTeam.listTeamMembers();
 
 
 
