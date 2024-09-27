@@ -6,19 +6,19 @@ public class Main {
 
 	record BaseballPlayer(String name, String position) implements Player {
 
-		public String getName() {
 
-			return name;
-		}
 
 	}
 
-	record footBallPlayer(String name, String position) implements Player {
+	record FootballPlayer(String name, String position) implements Player {
 
-		public String getName() {
 
-			return name;
-		}
+
+	}
+
+	record CricketPlayer(String name, String position) implements Player {
+
+
 
 	}
 
@@ -31,11 +31,25 @@ public class Main {
 
 
 
-		SportsTeam<footBallPlayer> football = new SportsTeam<>("footballTeam ");
+//		SportsTeam sportFootball = new SportsTeam("FootballTeam ");
 
-		BaseballPlayer player3 = new BaseballPlayer("Harbhajhan Singh","Bowler");
-		football.addTeamMember(player3);
-		football.listTeamMembers();
+//		BaseballPlayer bplayer3 = new BaseballPlayer("Harbhajhan Singh","Bowler");
+//		FootballPlayer fplayer3 = new FootballPlayer("Harbhajhan Singh","Bowler");
+
+//		sportFootball.addTeamMember(bplayer3);
+//		sportFootball.addTeamMember(fplayer3);
+//		sportFootball.listTeamMembers();
+
+		Team<BaseballPlayer> footballPlayerTeam= new Team<>("Messi :");
+		Team<CricketPlayer> cricketPlayerTeam = new Team<>("Ganguly :");
+		BaseballPlayer baseballPlayer = new BaseballPlayer("Alex Jordan","Mid Fielder");
+		CricketPlayer cricketPlayer = new CricketPlayer( "Harbhajhan Singh","Bowler");
+		footballPlayerTeam.addTeamMember(baseballPlayer);
+		cricketPlayerTeam.addTeamMember(cricketPlayer);
+		cricketPlayerTeam.listTeamMembers();
+		footballPlayerTeam.listTeamMembers();
+		setScoreResult(cricketPlayerTeam,footballPlayerTeam,5,6);
+
 
 
 
@@ -57,5 +71,16 @@ public class Main {
 		System.out.printf("%s %s %s %n", ourTeam.toString(), message, theirTeam.toString());
 
 	}
+	public static void setScoreResult(Team ourTeam, Team theirTeam, int ourScore, int theirScore) {
+
+		String message = ourTeam.setScore(ourScore, theirScore);
+		theirTeam.setScore(theirScore, ourScore);
+		System.out.printf("%s %s %s %n", ourTeam, message, theirTeam);
+
+	}
+
+
+
+
 
 }

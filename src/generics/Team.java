@@ -1,28 +1,28 @@
 package generics;
 
-import generics.Main.Player;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FootBallTeam {
+public class Team<T> {
 
 	private String teamName;
-	private List<Player> teamMembers = new ArrayList<>();
+	private List<T> teamMembers = new ArrayList<>();
 	private int totalWins;
 	private int totalLosses;
 	private int totalDraws;
 
-	public FootBallTeam(String teamname) {
+	public Team(String teamname) {
 		super();
 		teamName = teamname;
 	}
 
-	public void addTeamMember(Player player) {
+	public void addTeamMember(T t) {
 
-		if (!teamMembers.contains(player)) {
+		if (!teamMembers.contains(t)) {
 
-			teamMembers.add(player);
+			teamMembers.add(t);
 		} else {
 			System.out.println(" is already on this team");
 		}
@@ -62,13 +62,6 @@ public class FootBallTeam {
 
 		return teamName + ("(Ranked " + rankings() + ")");
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 
 }

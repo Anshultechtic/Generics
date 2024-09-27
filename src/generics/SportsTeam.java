@@ -5,7 +5,7 @@ import generics.Main.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SportsTeam<T extends Player> {
+public class SportsTeam {
 
 	private String teamName;
 	private List<Player> teamMembers = new ArrayList<>();
